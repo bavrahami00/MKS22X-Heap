@@ -30,6 +30,9 @@ public class MyHeap {
     }
   }
   public static void heapify(int[] data) {
+    for (int x = (int)Math.pow(2,(int)(Math.log(data.length)/Math.log(2)))-2; x >= 0; x++) {
+      pushDown(data,data.length,x);
+    }
   }
   public static void heapsort(int[] data) {
   }
