@@ -5,7 +5,7 @@ public class MyHeap {
     }
     if (size != index*2+2) {
       if (data[index*2+1] > data[index*2+2]) {
-        if (data[index*2+1] > data[index] {
+        if (data[index*2+1] > data[index]) {
           int temp = data[index];
           data[index] = data[index*2+1];
           data[index*2+1] = temp;
@@ -13,7 +13,7 @@ public class MyHeap {
         }
       }
       else {
-        if (data[index*2+2] > data[index] {
+        if (data[index*2+2] > data[index]) {
           int temp = data[index];
           data[index] = data[index*2+2];
           data[index*2+2] = temp;
@@ -30,7 +30,7 @@ public class MyHeap {
     }
   }
   public static void heapify(int[] data) {
-    for (int x = (int)Math.pow(2,(int)(Math.log(data.length)/Math.log(2)))-2; x >= 0; x++) {
+    for (int x = (int)Math.pow(2,(int)(Math.log(data.length)/Math.log(2)))-2; x >= 0; x--) {
       pushDown(data,data.length,x);
     }
   }
